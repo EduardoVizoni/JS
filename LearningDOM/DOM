@@ -1,0 +1,56 @@
+.
+├── html
+│   ├── html.lang
+│   └── head
+│       ├── meta (charset)
+│       ├── meta (name)
+│       ├── link rel
+│       └── title
+│           └── "Home"
+├── body
+│   ├── header
+│   │   ├── div.logo
+│   │   │   └── "Logo"
+│   │   └── nav
+│   │       ├── a href="index.html"
+│   │       │   └── "Home"
+│   │       └── a href="sobre.html" 
+│   │           └── "Sobre"
+│   ├── section.apresentacao
+│   │   ├── div.imagem 
+│   │   │   └── "Imagem"
+│   │   └── div.texto  
+│   │       ├── "texto"
+│   │       ├── h1
+│   │       │   └── "Título"
+│   │       ├── p
+│   │       │   └── Descrição da empresa
+│   │       └── button
+│   │           └── Botão
+│   ├── section.servicos
+│   │   ├── h2
+│   │   │   └── Nossos Serviços
+│   │   ├── div.cards
+│   │   │   ├── div.card
+│   │   │   ├── img (src="servico1.jpg", alt="Serviço 1")
+│   │   │   ├── h3
+│   │   │   │   └── Titulo Serviço 1
+│   │   │   └── p
+│   │   │       └── Descrição do Serviço 1
+│   │   ├── div.card
+│   │   │   ├── img (src="servico2.jpg", alt="Serviço 2")
+│   │   │   ├── h3
+│   │   │   │   └── Titulo Serviço 2
+│   │   │   └── p
+│   │   │       └── Descrição do Serviço 2
+│   │   └── div.card
+│   │       ├── img (src="servico3.jpg", alt="Serviço 3")
+│   │       ├── h3
+│   │       │   └── Titulo Serviço 3
+│   │       └── p
+│   │           └── Descrição do Serviço 3
+│   ├── footer
+│   │   └── p
+│   │       └── &copy; 2023 - Todos os direitos reservados.
+│   └── </body>
+└── </html>
