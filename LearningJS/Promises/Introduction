@@ -1,9 +1,0 @@
-const promessa = new Promise((resolve, reject) => {
-  const sucesso = true;
-
-  if (sucesso) {
-    resolve("Operação bem-sucedida!");
-  } else {
-    reject("Ocorreu um erro.");
-  }
-});
