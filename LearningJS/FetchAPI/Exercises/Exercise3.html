@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima Dinâmico</title>
+</head>
+<body>
+  <h1>Buscar Clima</h1>
+  <form id="weatherForm">
+    <input type="text" id="cityInput" placeholder="Digite o nome da cidade" required>
+    <button type="submit">Ver Clima</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('weatherForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const city = document.getElementById('cityInput').value.trim();
+      const apiKey = "SUA_CHAVE_DE_API";
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
+
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erro ao buscar dados: Cidade não encontrada.');
+          }
+          return response.json();
+        })
+        .then(data => {
+          const temp = data.main.temp;
+          const description = data.weather[0].description;
+          const cityName = data.name;
+
+          document.getElementById('result').innerHTML = `
+            <p>A temperatura em <strong>${cityName}</strong> é de <strong>${temp}°C</strong>.</p>
+            <p>Condições: ${description}.</p>
+          `;
+        })
+        .catch(error => {
+          document.getElementById('result').innerHTML = `<p style="color: red;">${error.message}</p>`;
+        });
+    });
+  </script>
+</body>
+</html>

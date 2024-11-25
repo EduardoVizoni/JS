@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previsão do Tempo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-700 min-h-screen flex items-center justify-center text-gray-800">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+    <h1 class="text-3xl font-bold text-center mb-6 text-gray-900">Previsão do Tempo</h1>
+    <div class="mb-4">
+      <label for="cidade" class="block text-lg font-medium text-gray-700">Digite o nome da cidade:</label>
+      <input type="text" id="cidade" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: São Paulo">
+    </div>
+    <button id="buscar" class="bg-blue-600 text-white w-full py-3 rounded-lg hover:bg-blue-700 transition-all font-semibold">
+      Buscar Previsão
+    </button>
+    <div id="spinner" class="mt-4 hidden text-center">
+      <i class="fas fa-spinner fa-spin text-2xl text-blue-600"></i>
+      <p class="text-gray-500 mt-2">Carregando...</p>
+    </div>
+    <div id="resultado" class="mt-6"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
