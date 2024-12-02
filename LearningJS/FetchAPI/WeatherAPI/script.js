@@ -23,7 +23,7 @@ buscarBtn.addEventListener('click', () => {
     })
     .then(data => {
       const { temp_c, feelslike_c, humidity, wind_kph, condition } = data.current;
-      const iconUrl = condition.icon; // URL do ícone fornecida pela API
+      const iconUrl = condition.icon;
       resultadoDiv.innerHTML = `
         <div class="bg-gray-100 p-6 rounded-lg shadow-md">
           <div class="text-center">
@@ -39,7 +39,7 @@ buscarBtn.addEventListener('click', () => {
             </div>
             <div class="bg-blue-50 p-4 rounded-lg shadow-sm text-center">
               <i class="fas fa-thermometer-half text-yellow-500 text-2xl"></i>
-              <p class="mt-2 font-medium">Sensação</p>
+              <p class="mt-2 font-medium">Sensação Térmica</p>
               <p class="text-lg font-bold">${feelslike_c}°C</p>
             </div>
             <div class="bg-blue-50 p-4 rounded-lg shadow-sm text-center">
